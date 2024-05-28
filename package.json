@@ -1,0 +1,56 @@
+{
+  "name": "hoc-nodejs",
+  "version": "1.0.0",
+  "main": "src/index.js",
+  "scripts": {
+    "beautiful": "lint-staged",
+    "start": "nodemon --inspect src/index.js",
+    "watch": "node-sass --watch src/resources/scss/ --output src/public/css/",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Zed23131414/nodejs_blog.git"
+  },
+  "keywords": [
+    "f8",
+    "nodejs",
+    "hotanphat",
+    "f8"
+  ],
+  "author": "phat",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Zed23131414/nodejs_blog/issues"
+  },
+  "homepage": "https://github.com/Zed23131414/nodejs_blog#readme",
+  "lint-staged": {
+    "src/**/*.{js,json,scss}": "prettier --single-quote --trailing-comma all --tab-width 4 --write"
+  },
+  "husky": {
+    "hook": {
+      "pre-commit": "lint-staged",
+      "pre-push": "npm test",
+      "...": "..."
+    }
+  },
+  "description": "",
+  "dependencies": {
+    "compile-sass": "^2.0.0",
+    "express": "^4.19.2",
+    "express-handlebars": "^7.1.2",
+    "is-empty": "^1.2.0",
+    "method-override": "^3.0.0",
+    "mongoose": "^6.10.0",
+    "mongoose-slug-generator": "^1.0.4",
+    "validator": "^13.11.0"
+  },
+  "devDependencies": {
+    "husky": "^9.0.11",
+    "lint-staged": "^15.2.2",
+    "morgan": "^1.10.0",
+    "node-sass": "^9.0.0",
+    "nodemon": "^3.1.0",
+    "prettier": "^3.2.5"
+  }
+}
